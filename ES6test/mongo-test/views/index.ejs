@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>ejs循环输出模版</h1>
+  <table>
+    <th>
+      <tr>
+        <td>用户名</td>
+        <td>用户描述</td>
+        <td>用户密码</td>
+        <td>操作</td>
+      </tr>
+    </th>
+    <tr>
+      <%for(var i = 0;i<list.length;i++){%>
+      <td><%=list[i].username%></td>
+      <td><%=list[i].title%></td>
+      <td><%=list[i].password%></td>
+      <td><input type="button" value="删除" onclick="del('<%=list[i]._id%>')"></td>
+      <%}%>
+    </tr>
+  </table>
+  <button >
+  <a href="">新增数据</a>
+</button>
+  </body>
+</html>
+<style>
+td{
+  border: 1px solid black
+}
+</style>
+<script>
+function del(id){
+  alert(id)
+}
+</script>

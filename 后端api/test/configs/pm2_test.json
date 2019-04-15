@@ -1,0 +1,12 @@
+{
+    "name": "ecy-web",
+    "script": "./bin/www",
+    "exec_mode": "cluster",
+    "instances":"2",
+    "env": {
+        "NODE_ENV": "test"
+    },
+    "merge_logs":true,
+    "error_file":"/data/logs/ecy-web_err.log",
+    "out_file":"/data/logs/ecy-web_out.log"
+}

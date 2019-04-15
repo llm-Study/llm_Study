@@ -1,0 +1,17 @@
+{
+  "name": "mysql-koa-test-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "mssql": "^5.0.4",
+    "nodemon": "^1.18.10"
+  }
+}

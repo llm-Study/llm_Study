@@ -1,0 +1,15 @@
+教程网站:
+1.阮一峰ES6:http://es6.ruanyifeng.com/#
+2.珠峰视频教程:http://www.html5train.com/login.do?fromurl=http%3A%2F%2Fwww.html5train.com%2Fviewer.do?courseId%3D1429513%26id%3D3337241#currentPlaying=3337241
+3.vs-code插件:https://blog.csdn.net/win7583362/article/details/79315055/
+4.canvas教程:https://segmentfault.com/a/1190000016031115?tdsourcetag=s_pcqq_aiomsg
+
+
+vue教程网站:
+1.vue-cli3.x脚手架:https://cli.vuejs.org/zh/guide/plugins-and-presets.html#%E6%8F%92%E4%BB%B6或者详细讲解:https://blog.csdn.net/qq_36407748/article/details/80739787
+2.vue+node+mysql+express实战项目lhttps://segmentfault.com/a/1190000008176208
+3.postcss插件:https://blog.csdn.net/xuqipeter/article/details/80452271
+4.vue3.0路由安装:https://my.oschina.net/parchments/blog/1933164
+
+后端教程:
+1.node.js:https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434502419592fd80bbb0613a42118ccab9435af408fd000

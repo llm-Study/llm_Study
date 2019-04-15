@@ -1,0 +1,4 @@
+[2019-04-10T11:38:01.238] [ERROR] error - 连接mongodb数据库失败,端口号:3000
+[2019-04-10T11:38:01.248] [ERROR] error - 连接mongodb数据库失败,端口号:3000
+[2019-04-10T11:39:37.323] [ERROR] error - 连接mongodb数据库失败,错误信息:MongoParseError: Invalid port (larger than 65535) with hostname
+[2019-04-10T11:39:37.333] [ERROR] error - 连接mongodb数据库失败,错误信息:MongoParseError: Invalid port (larger than 65535) with hostname
