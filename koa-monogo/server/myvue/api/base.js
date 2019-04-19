@@ -1,28 +1,27 @@
-import axios from 'axios';
-import qs from 'qs';
-let axiosGet = (api) => {
+import axios from 'axios'
+import qs from 'querystring'
+
+function axiosGet(api) {
     return new Promise((resolve, reject) => {
         axios.get(api).then(res => {
-            if (res.status >= 200 && res.status <= 300) {
+            if (res.status == 200 && res.status <= 300) {
                 resolve(res.data)
             }
-        }).catch(error => {
-            reject(error)
+        }).catch(err => {
+            reject(err)
         })
     })
 }
-let axiosPost = (url, params) => {
+
+function axiosPost(api, parms) {
     return new Promise((resolve, reject) => {
-        axios.post(url, qs.stringify(params), {
-            header: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(res => {
-            if (res.status >= 200 & res.status <= 300) {
+        let par = toString.call(parms) === "[object FormData]" ? parms : qs.stringify(parms);
+        axios.post(api, par).then(res => {
+            if (res.status == 200 && res.status <= 300) {
                 resolve(res.data)
             }
-        }).catch(error => {
-            reject(error)
+        }).catch(err => {
+            reject(err)
         })
     })
 }

@@ -32,7 +32,7 @@ export default {
       value: ""
     };
   },
-  mounted() {
+  created() {
     this.getusers();
   },
   methods: {

@@ -1,7 +1,15 @@
-exports.Createresult = (message, code, data) => {
-    let result = {};
-    result.message = message;
-    result.code = code;
-    result.data = Array;
-    return result
+module.exports = {
+    errorResult: (message, code) => {
+        const result = {}
+        result.message = message;
+        result.code = code;
+        return result
+    },
+    successResult: (message, code, data) => {
+        const result = {}
+        result.message = message;
+        result.code = code;
+        result.data = data;
+        return result
+    }
 }
