@@ -1,5 +1,6 @@
 const users = require('../mongoose/users');
-const result = require('../result/result')
+const result = require('../result/result');
+
 module.exports = {
     Getuser: async (ctx, next) => {
         ctx.body = await users.find();
@@ -26,7 +27,7 @@ module.exports = {
                 const newUser = new users({
                     email: ctx.request.body.email,
                     name: ctx.request.body.name,
-                    password: ctx.request.body.password,
+                    password: ctx.request.body.password
                 })
                 newUser.save();
                 ctx.body = result.successResult('success', 0);
