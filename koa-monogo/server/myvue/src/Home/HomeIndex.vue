@@ -4,20 +4,27 @@
     <el-row>
       <el-col :span="3">
         <el-menu
-          v-for="item in this.router"e
-          v-if="this.router.hidden"
-          default-active="2"
-          class="el-menu-vertical-demo"
+          :default-active="$route.path"
+          unique-opened
+          router
+          class="el-menu-vertical-demo asideson"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
         >
-          {{item}}
-          <!-- <el-menu-item-group>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-              <el-menu-item index="1-3">选项3</el-menu-item>
-          </el-menu-item-group>-->
+          <el-submenu
+            index="1"
+            v-for="(item,index) in this.$router.options.routes"
+            v-if="!item.hidden"
+          >
+          <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>{{item.name}}</span>
+            </template>
+            <el-menu-item-group v-for="child in item.children">
+              <el-menu-item :index="child.path">{{child.name}}</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-col>
       <el-col :span="21">
@@ -43,6 +50,7 @@ export default {
     return {
       router: this.$router.options.routes
     };
-  }
+  },
+  methods: {}
 };
 </script>
