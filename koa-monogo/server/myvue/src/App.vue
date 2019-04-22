@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     loadingHeight() {
-      console.log(this.$router)
       var orderHight = window.screen.availHeight;
       document.getElementById('app').style.height = orderHight+'px'
     }
