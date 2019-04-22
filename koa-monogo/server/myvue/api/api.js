@@ -4,8 +4,8 @@ import {
 } from './base';
 let http = 'http://localhost:3000/'
 export default {
-    getList: () => {
-        return axiosGet()
+    getUserList: () => {
+        return axiosGet(http+'getuserList')
     },
     addUserApi: (parmas) => {
         return axiosPost(http + 'addUser', parmas)
