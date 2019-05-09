@@ -1,6 +1,6 @@
 import axios from 'axios'
 import qs from 'querystring'
-
+axios.interceptors.request.use(config=>{})
 function axiosGet(api) {
     return new Promise((resolve, reject) => {
         axios.get(api).then(res => {
