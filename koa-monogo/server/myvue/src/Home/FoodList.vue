@@ -1,3 +1,7 @@
 <template>
-    <div class="User">22</div>
+    <div class="User">
+        <el-form>
+            
+        </el-form>
+    </div>
 </template>
