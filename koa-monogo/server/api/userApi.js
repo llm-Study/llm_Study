@@ -19,7 +19,7 @@ module.exports = {
         })
     },
     addUser: async (ctx, next) => {
-        console.log(ctx.req.body)
+        console.log(ctx.request.body)
         await users.findOne({
             email: ctx.request.body.email
         }).then(user => {
@@ -34,6 +34,23 @@ module.exports = {
             } else {
                 ctx.body = result.errorResult('error', 1);
             }
+        })
+    },
+    /**
+     * 修改用户评论状态
+     * @type status == 1 用户可以评论
+     * status == 0 用户不能评论
+     */
+    updateStatus: async (ctx, next) => {
+        const sta = ctx.request.body.status == 0 ? 1 : 0
+        await users.update({
+            'status': ctx.request.body.status
+        }, {
+            $set: {
+                'status': sta
+            }
+        }).then(res => {
+            ctx.body = result.successResult('success', 0, res)
         })
     }
 }
